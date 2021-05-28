@@ -119,6 +119,6 @@
 <br>
 
 # Info
-### Author: Luis Brandstätter
-### Version: 1.0
-### Date: 27.05.21
+Author: Luis Brandstätter
+Version: 1.0
+Date: 27.05.21

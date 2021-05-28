@@ -58,7 +58,7 @@
 ## Plotting:
  With **plot_shape_func()**  you can plot the shape functions over all values of the parameter vector u.
 
- ```pyhton
+ ```python
  bsp.plot_shape_func()
  ```
  ### Parameters: 
@@ -68,7 +68,7 @@
  
  With **plot_bspline()** you can plot the B-Spline curve in a coordinate system with x and y.
 
- ```pyhton
+ ```python
  bsp.plot_bspline(disp_control_points = True)
  ```
 

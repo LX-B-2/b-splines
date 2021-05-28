@@ -14,7 +14,7 @@
 <br>
 
 # Usage
- To be able to use this module, just put it in your current working directory and create a new file.  
+ To be able to use this module, just put it in your current working directory and create a new Python file.  
  At the beginning of your file, just import the module, for example like this:
 
  ```python

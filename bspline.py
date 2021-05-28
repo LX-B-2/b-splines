@@ -191,6 +191,7 @@ def plot_shape_func(order = None):
     plt.figure()
     plt.suptitle("shape functions of order %d" % order)
     plt.xlabel("u")
+    plt.ylabel("Ni%d"%order)
     plt.grid()
 
     # add shape functions

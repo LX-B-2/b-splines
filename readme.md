@@ -5,7 +5,7 @@
 
 # Requirements and Dependencies
  This module was written for [Python 3.9](https://www.python.org/), although older versions will probably also work fine. However, you need to have the [numpy](https://numpy.org/) and [matplotlib](https://matplotlib.org/) libraries installed for this module to work. 
- If they're not yet present on your machine, use the package manager [pip](https://pip.pypa.io/en/stable/) to install them like this: 
+ If they're not yet present on your machine, open the terminal and use the package manager [pip](https://pip.pypa.io/en/stable/) to install them like this: 
 
  ```bash
  pip install numpy

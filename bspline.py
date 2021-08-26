@@ -74,7 +74,7 @@ consts = Const()    # constants, to be set
 
 #--------------------------necessary functions for later use--------------------------#
 
-def __set_kont_vector(t_1 = 0):
+def __set_kont_vector(t_1: int = 0) -> None:
     """Calculates and sets the knot vector t."""
 
     global t
@@ -90,7 +90,7 @@ def __set_kont_vector(t_1 = 0):
             t.append(consts.n - consts.k + 2)
 
 
-def __set_param_vector():
+def __set_param_vector() -> None:
     """Sets the parameter vector u."""
 
     global u
@@ -98,7 +98,7 @@ def __set_param_vector():
     u = np.linspace(0, ((consts.n + 1) - (consts.k - 1)), INTERPOLATIONS)
 
 
-def calc_shape_func(__k = 1):
+def calc_shape_func(__k = 1) -> None:
     """
     Calculates the shape functions (according to scrpit CAMPP 2 page 72) 
     and saves them to the above defined dict `N`. 
@@ -155,7 +155,7 @@ def calc_shape_func(__k = 1):
     calc_shape_func(__k = __k+1)
 
 
-def __findFirst(list, value):
+def __findFirst(list: list, value) -> int:
     """
     Returns the first index of `value` in `list`.
 
@@ -174,7 +174,7 @@ def __findFirst(list, value):
     return -1
 
 
-def plot_shape_func(order = None):
+def plot_shape_func(order: int = None) -> None:
     """
     This function plots all the shape functions of order `order`.
 
@@ -199,7 +199,7 @@ def plot_shape_func(order = None):
         plt.plot(x, N["N%d%d" % (i, order)])
 
 
-def __set_x_values():
+def __set_x_values() -> None:
     """Sets the x values for later use in plots."""
 
     global x
@@ -207,7 +207,7 @@ def __set_x_values():
     x = np.linspace(0, t[len(t)-1], INTERPOLATIONS)
 
 
-def print_influence_at(value):
+def print_influence_at(value: float) -> None:
     """
     Prints the influence of all points at the first instance of `value` 
     in the global parameter vector `u`.
@@ -224,7 +224,7 @@ def print_influence_at(value):
         print("P%d: %.4f" % (i, N["N%d%d" % (i, consts.k)][index]))
 
 
-def calc_bslpline():
+def calc_bslpline() -> None:
     """Calculates the blspline curve and saves it to global variable `curve`."""
 
     global curve
@@ -244,7 +244,7 @@ def calc_bslpline():
     curve = np.dot(CONTROL_POINTS, shape_functions_list)
 
 
-def plot_bspline(disp_control_points = True):
+def plot_bspline(disp_control_points: bool = True) -> None:
     """
     This function plots the shape functions.
 
@@ -273,12 +273,12 @@ def plot_bspline(disp_control_points = True):
         plt.plot(CONTROL_POINTS[0], CONTROL_POINTS[1], color = 'black', linewidth = 0.3)
 
 
-def show():
+def show() -> None:
     """Shows the created plots."""
     plt.show()
 
 
-def init(pol_order: int = POL_ORDER, interpolations: int = INTERPOLATIONS, control_points: list[list] = CONTROL_POINTS):
+def init(pol_order: int = POL_ORDER, interpolations: int = INTERPOLATIONS, control_points: list[list] = CONTROL_POINTS) -> None:
     """
     This function initializes or re-initializes all values (call this function
     at startup or use it to re-initialize with new values). If some of its parameters 
